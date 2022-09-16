@@ -1,8 +1,6 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 
-const dev = false
-
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
@@ -15,10 +13,8 @@ const config = {
 			pages: 'docs',
 			assets: 'docs',
 			fallback: null,
-			
 		  },),
 		  paths: {
-			// change below to your repo name
 			base:  "/svelte-pure-static",
 		},
 	}
