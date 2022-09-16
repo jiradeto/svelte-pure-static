@@ -16,6 +16,7 @@ const config = {
 		  },),
 		  paths: {
 			base:  "/svelte-pure-static",
+			assets:  "/svelte-pure-static",
 		},
 	}
 };
