@@ -15,11 +15,12 @@ const config = {
 			pages: 'docs',
 			assets: 'docs',
 			fallback: null,
-			paths: {
-				// change below to your repo name
-				base: dev ? "" : "/svelte-pure-static",
-			},
-		  }),
+			
+		  },),
+		  paths: {
+			// change below to your repo name
+			base:  "/svelte-pure-static",
+		},
 	}
 };
 
