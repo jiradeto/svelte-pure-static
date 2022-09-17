@@ -1,1 +1,1 @@
-window.__sveltekit_data = (function(a,b,c){return {type:b,nodes:[null,{type:b,data:{persons:[{name:"John Doe",age:33,weight:78},{name:"Sarah",age:c,weight:56},{name:"Ji",age:c,weight:122}]},uses:{dependencies:a,params:a,parent:a,url:a}}]}}(void 0,"data",27))
+window.__sveltekit_data = (function(a,b){return {type:b,nodes:[null,{type:b,data:{persons:[{name:"John Doe",age:33,weight:78},{name:"Banana",age:27,weight:122}]},uses:{dependencies:a,params:a,parent:a,url:a}}]}}(void 0,"data"))
