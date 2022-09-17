@@ -1,6 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 
+const isDev = false
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
@@ -15,7 +16,7 @@ const config = {
 			fallback: null,
 		  },),
 		  paths: {
-			base:  "/svelte-pure-static",
+			base: isDev ? "" : "/svelte-pure-static",
 		},
 	}
 };
