@@ -1,0 +1,1 @@
+window.__sveltekit_data = (function(a,b){return {type:b,nodes:[null,{type:b,data:{persons:[{name:"John Doe",age:33,weight:78},{name:"Sarah",age:27,weight:56}]},uses:{dependencies:a,params:a,parent:a,url:a}}]}}(void 0,"data"))
