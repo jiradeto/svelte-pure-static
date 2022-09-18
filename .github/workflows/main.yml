@@ -36,9 +36,8 @@ jobs:
       - run: cat docs/check.json
       - run: 'echo "toJson(${{ github.event.client_payload.data }})" >> docs/payload1.json'
       - run: echo "toJson(${{ github.event.client_payload.data }})" >> docs/payload2.json
-      - run: echo toJson(${{ github.event.client_payload.data }}) >> docs/payload3.json
+      - run: payload=toJson(${{github.event.client_payload}}) && echo payload
       
-
 
       - name: Deploy gh-pages 🚁
         uses: s0/git-publish-subdir-action@develop
