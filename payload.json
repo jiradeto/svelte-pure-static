@@ -1,1 +1,5 @@
-null
+{
+  age: 12,
+  color: red,
+  foo: bar224455
+}
