@@ -27,6 +27,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      - run: 'echo "field Foo: ${{ github.event.client_payload.foo }}"'
+      - run: 'echo "incoming payload: ${{ toJson(github.event.client_payload) }}"'
       
       # Runs a single command using the runners shell
       - name: Run a one-line script
