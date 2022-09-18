@@ -32,7 +32,7 @@ jobs:
         run: |
           npm ci
           npm run build
-      - run: payload='${{ (github.event.client_payload) }}'
+      - run: payload='${{ toJson(github.event.client_payload) }}'
       - run: echo "$payload" 
 
 
