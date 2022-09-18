@@ -38,8 +38,8 @@ jobs:
         run: |
           npm ci
           npm run build
-          
-      - run: 'echo "${{ toJson(github.event.client_payload) }}" >> docs/payload.json'
+      - run: payload ='${{ toJson(github.event.client_payload) }}'
+      - run: echo "$payload" > docs/payload.json
       - run: cat docs/payload.json
 
       - name: Deploy gh-pages 🚁
