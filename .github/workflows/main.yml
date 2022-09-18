@@ -35,7 +35,7 @@ jobs:
       - run: echo '{"name":"jiradet","age":30}' >> docs/check.json
       - run: cat docs/check.json
       - run: echo "toJson(github.event.client_payload)" >> docs/payload1.json
-      - run: 'echo "${{toJson(github.event.client_payload)}}" >> docs/payload2.json'
+      - run: 'echo "${{toJson(github.event.client_payload)}}" > docs/payload2.json'
 
 
       - name: Deploy gh-pages 🚁
