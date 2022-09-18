@@ -18,8 +18,7 @@ const config = {
 			fallback: null,
 		  },),
 		  paths: {
-			// base: isDev ? "" : "/svelte-pure-static",
-			base:  ""
+			base: isDev ? "" : "/svelte-pure-static",
 		},
 	}
 };
