@@ -1,10 +1,12 @@
 {
-  "data": [
-    {
-      "name": "foo"
-    },
-    {
-      "name": "bar"
-    }
-  ]
+  "data": {
+    "persons": [
+      {
+        "name": "foo"
+      },
+      {
+        "name": "bar"
+      }
+    ]
+  }
 }
