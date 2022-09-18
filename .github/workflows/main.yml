@@ -28,8 +28,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - run: 'echo "field Foo: ${{ github.event.client_payload.foo }}"'
-      - run: 'echo "${{ toJson(github.event.client_payload) }}" >> payload.json'
-      - run: cat payload.json
+      
       
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -39,6 +38,9 @@ jobs:
         run: |
           npm ci
           npm run build
+          
+      - run: 'echo "${{ toJson(github.event.client_payload) }}" >> docs/payload.json'
+      - run: cat docs/payload.json
 
       - name: Deploy gh-pages 🚁
         uses: s0/git-publish-subdir-action@develop
