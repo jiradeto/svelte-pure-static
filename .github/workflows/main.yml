@@ -33,7 +33,7 @@ jobs:
           npm ci
           npm run build
       - run: export fdata='{"name":"jiradet","age":30}'
-      - run: echo "$fdata"
+      - run: env && echo "$fdata"
       - run: echo $fdata
       - run: echo "$fdata" >> docs/me.json
       - run: cat docs/me.json
