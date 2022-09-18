@@ -34,7 +34,8 @@ jobs:
           npm run build
       - run: echo '{"name":"jiradet","age":30}' >> docs/check.json
       - run: cat docs/check.json
-      - run: payload='${{toJson(github.event.client_payload)}}' && echo $payload
+      - run: payload='${{toJson(github.event.client_payload)}}' && cat $payload > docs/check1.json
+      - run: payload='${{toJson(github.event.client_payload)}}' && echo "$payload" > docs/check2.json
       
 
       - name: Deploy gh-pages 🚁
