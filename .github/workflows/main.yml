@@ -32,9 +32,10 @@ jobs:
         run: |
           npm ci
           npm run build
-      - run: payload='${{ toJson(github.event.client_payload) }}'
-      - run: echo $payload >> docs/payload.json
-      - run: cat docs/payload.json
+      - run: fdata='{"name":"jiradet","age":30}'
+      - run: echo "$fdata" > docs/me.json
+      - run: echo docs/me.json
+
 
       - name: Deploy gh-pages 🚁
         uses: s0/git-publish-subdir-action@develop
