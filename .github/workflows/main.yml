@@ -23,19 +23,22 @@ jobs:
       - uses: actions/checkout@v3
       - run: 'echo "field Foo: ${{ github.event.client_payload.foo }}"'
       
-      
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
+      
+      - name: Extract new payload
+        run: |
+          payload='${{toJson(github.event.client_payload)}}'
+          echo "$payload" > payload.json
+          cp payload.json docs
 
       - name: Install and Build 
         run: |
           npm ci
           npm run build
-      - run: echo '{"name":"jiradet","age":30}' >> docs/check.json
-      - run: cat docs/check.json
-      - run: payload='${{toJson(github.event.client_payload)}}' && echo "$payload" >> docs/check2.json
-      
+
+     
 
       - name: Deploy gh-pages 🚁
         uses: s0/git-publish-subdir-action@develop
