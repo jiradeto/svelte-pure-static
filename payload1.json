@@ -1,1 +1,1 @@
-toJson(github.event.client_payload)
+Array
