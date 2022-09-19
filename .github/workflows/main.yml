@@ -19,13 +19,10 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Do something meaningless
+        run: which python3 
+
       - uses: actions/checkout@v3
-      - run: 'echo "field Foo: ${{ github.event.client_payload.foo }}"'
-      
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
       
       - name: Extract new payload
         run: |
@@ -36,10 +33,7 @@ jobs:
       - name: Install and Build 
         run: |
           npm ci
-          npm run build
-          
-      - name: Do something meaningless
-        run: which python3 
+          npm run build        
 
       - name: Deploy gh-pages 🚁
         uses: s0/git-publish-subdir-action@develop
