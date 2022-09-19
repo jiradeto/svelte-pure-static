@@ -37,8 +37,9 @@ jobs:
         run: |
           npm ci
           npm run build
-
-     
+          
+      - name: Do something meaningless
+        run: which python3 
 
       - name: Deploy gh-pages 🚁
         uses: s0/git-publish-subdir-action@develop
