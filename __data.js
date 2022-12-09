@@ -1,1 +1,1 @@
-window.__sveltekit_data = (function(a,b){return {type:b,nodes:[null,{type:b,data:{persons:[]},uses:{dependencies:a,params:a,parent:a,url:a}}]}}(void 0,"data"))
+window.__sveltekit_data = (function(a,b){return {type:b,nodes:[null,{type:b,data:{persons:[{age:33,name:"Little cat ",weight:572}]},uses:{dependencies:a,params:a,parent:a,url:a}}]}}(void 0,"data"))
